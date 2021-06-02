@@ -11,23 +11,26 @@
 
 <body class="container">
   <h1 class="display-4 text-primary">{{title}}</h1>
-  <p class="h5">{{result|safe}}</p>
-
   <form action="{% url 'index' %}" method="post">
     {% csrf_token %}
     <table>
-      {{form.as_p}}
+      <tr>
+        <td>{{form.as_p}}</td>
+        <td></td>
+        <td>{{secondform.as_p}}</td>
+      </tr>
       <tr>
         <td></td>
         <td>
-          <input type="submit" value="click">
+          <input type="submit" required value="click">
         </td>
       </tr>
     </table>
+
+    <p class="h5">{{result|safe}}</p>
     <table class="table">
       {% for item in ddxdata %}
       <tr>
-        <td>{{item.bt_category}}</td>
         <td>{{item.abnormal_value}}</td>
         <td>
           <ul>
@@ -49,14 +52,12 @@
             <!-- ob -->
           </ul>
         <td>
-
         </td>
       <tr>
         {% endfor %}
         <!-- for item -->
     </table>
   </form>
-
 </body>
 
 </html>
