@@ -1,5 +1,6 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
+
 <html lang="ja">
 
 <head>
@@ -32,7 +33,7 @@
       {% for item in ddxdata %}
       <tr>
         <td>{{item.abnormal_value}}</td>
-        <td>
+        <tr>
           <ul>
             {% for ob in item.firstddxlist_set.all %}
             <li>{{ob.differential_list_first}}</li>
@@ -53,9 +54,10 @@
           </ul>
         <td>
         </td>
-      <tr>
+      </tr>
         {% endfor %}
         <!-- for item -->
+        </tr>
     </table>
   </form>
 </body>
