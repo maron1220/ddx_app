@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
+import django_heroku
 from socket import gethostname
 import dj_database_url
 import os
@@ -167,3 +167,5 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Use different settings in local environment and Heroku
 # https://qiita.com/miler0528/items/1926e93ed97979f8e9fa
+
+django_heroku.settings(locals())
