@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'ddx_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djangogirls',
+        'NAME': 'animalddx',
         'USER': 'name',
         'PASSWORD': '',
         'HOST': 'localhost',
