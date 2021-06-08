@@ -7,13 +7,9 @@ For more information on this file, see
 https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/
 """
 
-from whitenoise.django import DjangoWhiteNoise
 import os
-
+from dj_static import Cling
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ddx_app.settings')
-
-application = get_wsgi_application()
-
-application = DjangoWhiteNoise(application)
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "アプリ名.settings")
+application = Cling(get_wsgi_application())
