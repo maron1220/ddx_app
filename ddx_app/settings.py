@@ -14,10 +14,11 @@ from socket import gethostname
 import dj_database_url
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+SECRET_KEY = '5wup%g1&8g0m$55k0+r&51elua-6h86dkh0p^%9e*w4&cng+38'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
